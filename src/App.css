@@ -1,38 +1,145 @@
-.App {
-  text-align: center;
+.app {
+  height: 100vh;
+  display: flex;
+  background-color: blueviolet;
+  color: white;
+}
+.main {
+  width: 75%;
+  background-image: url(./assets/bg.jpg),
+    linear-gradient(to bottom, black, blueviolet);
+  display: flex;
+  flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.top {
+  height: 50%;
+  position: relative;
+}
+.timer {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 5px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 1000px !important;
+  position: absolute;
+  bottom: 100px;
+  left: 50px;
+}
+.bottom {
+  height: 50%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.trivia {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+}
+
+.question {
+  width: 80%;
+  background: linear-gradient(purple, black);
+  border: 2px solid white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.answers{
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+
+
+}
+.answer{
+ width: 40%;
+ padding:  10px 0px 10px 0px;
+ text-align: center;
+  background: linear-gradient(rgb(214, 103, 214), black);
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: large;
+  font-weight: 200px;
+margin: 0px 20px 20px 20px;
+cursor: pointer;
+}
+.answer:hover,
+.answer.active{
+ background: mediumblue;
+}
+.answer.correct{
+animation: correct 3s ease forwards  ;
+
+}
+@keyframes correct {
+ 0%,
+ 22%,42%{
+  background: mediumblue;
+ }
+ 20%,
+ 40%,60%{
+  background:linear-gradient(rgb(214, 103, 214), black); ;
+ }
+ 62%,100%{
+  background: green;
+ }
+
+}
+
+.answer.wrong{
+animation: wrong 3s ease forwards  ;
+
+}
+@keyframes wrong {
+ 0%,
+ 22%,42%{
+  background: mediumblue;
+ }
+ 20%,
+ 40%,60%{
+  background:linear-gradient(rgb(214, 103, 214), black); ;
+ }
+ 62%,100%{
+  background: red;
+ }
+
+}
+
+.pyramid {
+  width: 30%;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.moneyList {
+  list-style: none;
+  width: 100%;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.moneyListItem {
+  display: flex;
+  align-items: center;
+  padding: 7px;
+  border-radius: 5px;
+}
+.moneyListItem.active {
+  background-color: aqua;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.moneyListItemNumber {
+  font-size: 20px;
+  font-weight: 100;
+  width: 30%;
+}
+.moneyListIemAmount {
+  font-size: 25px;
+  font-weight: 200;
 }
