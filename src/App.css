@@ -1,11 +1,11 @@
 .app {
   height: 100vh;
   display: flex;
-  background-color: blueviolet;
+ background: linear-gradient(rgb(144, 57, 144), black);
   color: white;
-  overflow: hidden;
 }
 .main {
+  overflow: auto;
   width: 75%;
   background-image: url(./assets/bg.jpg),
     linear-gradient(to bottom, black, blueviolet);
@@ -50,6 +50,7 @@
   padding: 20px;
   border-radius: 10px;
   text-align: center;
+  margin: 20px 0px;
 }
 .answers {
   width: 100%;
@@ -115,28 +116,28 @@
 
 .pyramid {
   width: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .moneyList {
   list-style: none;
-height: 100vh;
+  height: 100vh;
   width: 100%;
-  padding:0px 20px;
-overflow: scroll;
-
+  padding: 0px 20px;
+  overflow: scroll;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .moneyListItem {
   display: flex;
   align-items: center;
-  padding: auto;
+  width: 100%;
   border-radius: 5px;
-  margin: 6px 0px;
+  margin: 6px 5px;
+
 }
 .moneyListItem.active {
-  background-color: aqua;
+  background-color: rgb(78, 4, 82);
 }
 
 .moneyListItemNumber {
@@ -145,8 +146,9 @@ overflow: scroll;
   width: 30%;
 }
 .moneyListIemAmount {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 200;
+
 }
 
 .endText {
@@ -156,6 +158,8 @@ overflow: scroll;
   left: 0;
   right: 0;
   margin: auto;
+ background: linear-gradient(rgb(214, 103, 214), black);
+ 
 }
 
 .start {
@@ -191,14 +195,34 @@ overflow: scroll;
   font-weight: 800;
   cursor: pointer;
 }
-.startInput:focus{
+.startInput:focus {
   outline: none;
 }
-.startButton:hover{
+.startButton:hover {
   background-color: rgb(6, 155, 51);
 }
-@media(min-width=900px){
-  .moneyList{
-    background-color: rgb(43, 226, 64);
+
+@media only screen and (max-width: 900px) {
+  .moneyListItemNumber,
+  .moneyListIemAmount {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    padding: 4px 0px;
+    
   }
+  .moneyListItem {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+  }
+  .pyramid {
+    width: 35%;
+  }
+
+  .main {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 900px) {
 }
