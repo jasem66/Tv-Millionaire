@@ -3,6 +3,7 @@
   display: flex;
   background-color: blueviolet;
   color: white;
+  overflow: hidden;
 }
 .main {
   width: 75%;
@@ -120,15 +121,19 @@
 }
 .moneyList {
   list-style: none;
+height: 100vh;
   width: 100%;
-  padding: 20px;
+  padding:0px 20px;
+overflow: scroll;
+
 }
 
 .moneyListItem {
   display: flex;
   align-items: center;
-  padding: 7px;
+  padding: auto;
   border-radius: 5px;
+  margin: 6px 0px;
 }
 .moneyListItem.active {
   background-color: aqua;
@@ -191,4 +196,9 @@
 }
 .startButton:hover{
   background-color: rgb(6, 155, 51);
+}
+@media(min-width=900px){
+  .moneyList{
+    background-color: rgb(43, 226, 64);
+  }
 }
