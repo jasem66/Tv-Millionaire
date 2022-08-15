@@ -116,12 +116,13 @@
 
 .pyramid {
   width: 30%;
+
 }
 .moneyList {
   list-style: none;
   height: 100vh;
-  width: 100%;
-  padding: 0px 20px;
+  width: auto;
+
   overflow: scroll;
   display: flex;
   align-items: center;
@@ -131,7 +132,7 @@
 .moneyListItem {
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 95%;
   border-radius: 5px;
   margin: 6px 5px;
 
@@ -208,14 +209,22 @@
     font-size: 15px;
     display: flex;
     align-items: center;
-    padding: 4px 0px;
+    padding: 0px 0px;
+ 
     
   }
   .moneyListItem {
+
     display: flex;
     align-items: center;
-    justify-content: baseline;
+    justify-content: center;
+    
+    
   }
+    .moneyList{
+   width: auto;
+   padding: 0;
+    }
   .pyramid {
     width: 35%;
   }
