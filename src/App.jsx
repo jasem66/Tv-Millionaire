@@ -111,7 +111,7 @@ questionNumber>1 && setEarned(moneyPyramid.find((money)=>money.id === questionNu
 
   return (
     <div className='app'>
-      {userName ? (
+      {!userName ? (
         <>
           <div className='main'>
             {timeOut ? (
